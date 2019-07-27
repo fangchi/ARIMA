@@ -2,32 +2,32 @@ package arima;
 import java.util.*;
 
 public class AR {
-	
+
 	double[] stdoriginalData={};
 	int p;
 	ARMAMath armamath=new ARMAMath();
-	
+
 	/**
-	 * ARÄ£ĞÍ
+	 * ARæ¨¡å‹
 	 * @param stdoriginalData
-	 * @param p //pÎªMAÄ£ĞÍ½×Êı
+	 * @param p //pä¸ºMAæ¨¡å‹é˜¶æ•°
 	 */
 	public AR(double [] stdoriginalData,int p)
 	{
 		this.stdoriginalData=stdoriginalData;
 		this.p=p;
 	}
-/**
- * ·µ»ØARÄ£ĞÍ²ÎÊı
- * @return
- */
+	/**
+	 * è¿”å›ARæ¨¡å‹å‚æ•°
+	 * @return
+	 */
 	public Vector<double[]> ARmodel()
 	{
 		Vector<double[]> v=new Vector<double[]>();
 		v.add(armamath.parcorrCompute(stdoriginalData, p, 0));
-		return v;//µÃµ½ÁË×Ô»Ø¹éÏµÊı
-		
-		//»¹Òª¹À¼Æ·½²îÏîÂğ£¿
+		return v;//å¾—åˆ°äº†è‡ªå›å½’ç³»æ•°
+
+		//è¿˜è¦ä¼°è®¡æ–¹å·®é¡¹å—ï¼Ÿ
 	}
-	
+
 }
