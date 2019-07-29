@@ -1,2 +1,4 @@
 .gitingore
 .idea/*
+ARIMA.iml
+target/*
